@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #00062e url('../images/taryn-kaahanui-J5b23iaAHis-unsplash.jpg') no-repeat center center/cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center */
+    align-items: center;
+    color: #fff;
+    font-family:  'Arial Narrow Bold', sans-serif  ;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    transform: scale(1);
+}
+
+
+.gradient-circle{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4ca493 40%,
+        #fff 30%,
+        #fff 60%,
+        #8989ea 50%
+    );
+    position: absolute;
+    z-index: -2;
+}
+
+.text{
+    font-size: 2rem;
+}
+
+.circle{
+    background-color: #00062e;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+}
+
+.pointer-container{
+    width: 20px;
+    height: 190px;
+    position: absolute;
+    top: -40px;
+    animation: rotate 7.5s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.pointer{
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.container.grow{
+    animation: grow 3s linear forwards;
+}
+
+
+.container.shrink{
+    animation: shrink 3s linear forwards;
+}
+
+
+
+@keyframes grow {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.2);    
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: scale(1.2);
+    }
+
+    to{
+        transform: scale(1);    
+    }
+}
+
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);    
+    }
+}
